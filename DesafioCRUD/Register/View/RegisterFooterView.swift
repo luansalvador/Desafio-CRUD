@@ -9,8 +9,6 @@ import UIKit
 
 class RegisterFooterView: UIView {
     
-    //weak var registerViewModelFooter: RegisterViewModel?
-    
     var registerAction: (() -> Void)?
     
     static let height: CGFloat = 100
@@ -52,7 +50,7 @@ class RegisterFooterView: UIView {
     
     @objc private func performRegister() {
         self.registerAction?()
-        //self.registerViewModelFooter?.addClient()
+
     }
     
     

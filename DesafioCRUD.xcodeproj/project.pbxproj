@@ -35,6 +35,9 @@
 		C993328A2829873F0093C520 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99332892829873F0093C520 /* EditViewController.swift */; };
 		C993328F282989EE0093C520 /* LabelValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993328E282989EE0093C520 /* LabelValues.swift */; };
 		C993329328298BFD0093C520 /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993329228298BFD0093C520 /* EditTableViewCell.swift */; };
+		C9AEF697283D3F3D00BF1772 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AEF696283D3F3D00BF1772 /* HomeViewController.swift */; };
+		C9AEF699283D3F7100BF1772 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AEF698283D3F7100BF1772 /* HomeView.swift */; };
+		C9AEF69C283D451C00BF1772 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AEF69B283D451C00BF1772 /* CardTableViewCell.swift */; };
 		C9AFF213282553B500A71F9D /* ConsultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFF212282553B500A71F9D /* ConsultModel.swift */; };
 		C9AFF2152825569600A71F9D /* ConfigurableTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFF2142825569600A71F9D /* ConfigurableTableViewProtocol.swift */; };
 		C9CE8188282EA06300218E95 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE8187282EA06300218E95 /* LoginViewModel.swift */; };
@@ -75,6 +78,9 @@
 		C99332892829873F0093C520 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		C993328E282989EE0093C520 /* LabelValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelValues.swift; sourceTree = "<group>"; };
 		C993329228298BFD0093C520 /* EditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
+		C9AEF696283D3F3D00BF1772 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C9AEF698283D3F7100BF1772 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C9AEF69B283D451C00BF1772 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		C9AFF212282553B500A71F9D /* ConsultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultModel.swift; sourceTree = "<group>"; };
 		C9AFF2142825569600A71F9D /* ConfigurableTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableTableViewProtocol.swift; sourceTree = "<group>"; };
 		C9CE8187282EA06300218E95 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -95,6 +101,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C906905B2837CA7E003DD300 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C90DC4BD2821A8F4003803CC /* Client+CoreDataProperties.swift */,
+				C90DC4BC2821A8F4003803CC /* Client+CoreDataClass.swift */,
+				C9E170DF2822B3D3000C97CC /* Networking.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
 		C90C1D1D2819B01B009FD1F9 = {
 			isa = PBXGroup;
 			children = (
@@ -114,11 +130,10 @@
 		C90C1D282819B01B009FD1F9 /* DesafioCRUD */ = {
 			isa = PBXGroup;
 			children = (
+				C9AEF695283D3F2500BF1772 /* Home */,
+				C906905B2837CA7E003DD300 /* CoreDataManager */,
 				C9793699282D4159009ADC47 /* Extensions */,
 				C9793695282D35C1009ADC47 /* Login */,
-				C90DC4BC2821A8F4003803CC /* Client+CoreDataClass.swift */,
-				C90DC4BD2821A8F4003803CC /* Client+CoreDataProperties.swift */,
-				C9AFF2162825A06000A71F9D /* Networking */,
 				C9F94E432823881600BB483F /* Protocol */,
 				C99332862829846D0093C520 /* Edit */,
 				C90DC4C82821B911003803CC /* Consult */,
@@ -345,20 +360,22 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
+		C9AEF695283D3F2500BF1772 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C9AEF696283D3F3D00BF1772 /* HomeViewController.swift */,
+				C9AEF698283D3F7100BF1772 /* HomeView.swift */,
+				C9AEF69B283D451C00BF1772 /* CardTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		C9AFF2112825538400A71F9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C9AFF212282553B500A71F9D /* ConsultModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		C9AFF2162825A06000A71F9D /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				C9E170DF2822B3D3000C97CC /* Networking.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		C9CE8186282EA05200218E95 /* LoginViewModel */ = {
@@ -451,10 +468,12 @@
 				C993328A2829873F0093C520 /* EditViewController.swift in Sources */,
 				C90C1D2E2819B01B009FD1F9 /* OnboardingViewController.swift in Sources */,
 				C9CE8188282EA06300218E95 /* LoginViewModel.swift in Sources */,
+				C9AEF697283D3F3D00BF1772 /* HomeViewController.swift in Sources */,
 				C9933288282984EE0093C520 /* EditView.swift in Sources */,
 				C90DC4BB2821A34D003803CC /* RegisterLabelValuesViewModel.swift in Sources */,
 				C993328F282989EE0093C520 /* LabelValues.swift in Sources */,
 				C94BF99C281B664A005B18E8 /* RegisterIncomePickerViewCell.swift in Sources */,
+				C9AEF699283D3F7100BF1772 /* HomeView.swift in Sources */,
 				C90C1D342819B01B009FD1F9 /* DesafioCRUD.xcdatamodeld in Sources */,
 				C9AFF213282553B500A71F9D /* ConsultModel.swift in Sources */,
 				C90C1D2A2819B01B009FD1F9 /* AppDelegate.swift in Sources */,
@@ -481,6 +500,7 @@
 				C977BE45282C351800106F91 /* RegisterViewModel.swift in Sources */,
 				C90C1D2C2819B01B009FD1F9 /* SceneDelegate.swift in Sources */,
 				C993329328298BFD0093C520 /* EditTableViewCell.swift in Sources */,
+				C9AEF69C283D451C00BF1772 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

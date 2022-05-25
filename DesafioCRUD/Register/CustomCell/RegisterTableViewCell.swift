@@ -64,7 +64,5 @@ extension RegisterTableViewCell: ConfigurableCellProtocol {
         self.label.text = text
         self.textField.tag = tag
         self.textField.delegate = parent
-    }
-    
-    
+    }    
 }

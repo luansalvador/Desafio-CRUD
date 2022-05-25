@@ -15,7 +15,6 @@ class RegisterViewController: UIViewController {
     let registerTableViewlCell = RegisterTableViewCell()
     let registerViewModel = RegisterViewModel()
     var isValid: Bool = false
-   // let registerViewModelController = RegisterViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,9 +101,6 @@ extension RegisterViewController: UITableViewDelegate, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        //let footer = self.registerFooterView
-        //footer.registerViewModelFooter = registerViewModelController
-        //return footer
         return registerFooterView
     }
 }
@@ -130,20 +126,4 @@ extension RegisterViewController: UITextFieldDelegate  {
     }
 }
 
-/*extension RegisterViewController: RegisterViewModelDelegate {
-    func displayAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true)
-    }
-    
-    func displayAlertAction(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.popView()}))
-            present(alert, animated: true)
-    }
-    
-    func popView() {
-        self.navigationController?.popViewController(animated: true)
-    }
-}*/
+

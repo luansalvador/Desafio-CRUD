@@ -10,11 +10,9 @@ enum TextFieldData: Int {
     case nameTextField = 0
     case cpfTextField
     case emailTextField
-    //mudei esse
     case equityTextField
     case incomeTextField
     case birthDateTextField
     case passwordTextField 
     case confirmPasswordTextField
-    //case account
 }
