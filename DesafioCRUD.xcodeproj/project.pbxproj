@@ -45,6 +45,8 @@
 		C9F94E452823885900BB483F /* ConfigurableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F94E442823885900BB483F /* ConfigurableCellProtocol.swift */; };
 		C9FA8ECD2822283F00E93F04 /* RegisterTextFieldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA8ECC2822283F00E93F04 /* RegisterTextFieldData.swift */; };
 		C9FA8ECF28222B5700E93F04 /* RegisterIncomeDataPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA8ECE28222B5700E93F04 /* RegisterIncomeDataPickerView.swift */; };
+		C9FB8CB0283E5BBE0097F639 /* LabelValuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB8CAF283E5BBE0097F639 /* LabelValuesViewModel.swift */; };
+		C9FB8CB2283E5F630097F639 /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB8CB1283E5F630097F639 /* OptionsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		C9F94E442823885900BB483F /* ConfigurableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCellProtocol.swift; sourceTree = "<group>"; };
 		C9FA8ECC2822283F00E93F04 /* RegisterTextFieldData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextFieldData.swift; sourceTree = "<group>"; };
 		C9FA8ECE28222B5700E93F04 /* RegisterIncomeDataPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIncomeDataPickerView.swift; sourceTree = "<group>"; };
+		C9FB8CAF283E5BBE0097F639 /* LabelValuesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelValuesViewModel.swift; sourceTree = "<group>"; };
+		C9FB8CB1283E5F630097F639 /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +370,8 @@
 				C9AEF696283D3F3D00BF1772 /* HomeViewController.swift */,
 				C9AEF698283D3F7100BF1772 /* HomeView.swift */,
 				C9AEF69B283D451C00BF1772 /* CardTableViewCell.swift */,
+				C9FB8CAF283E5BBE0097F639 /* LabelValuesViewModel.swift */,
+				C9FB8CB1283E5F630097F639 /* OptionsTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -488,10 +494,12 @@
 				C979369B282D4186009ADC47 /* UITextField.swift in Sources */,
 				C915DB01281C0FAA00C5F701 /* RegisterFooterView.swift in Sources */,
 				C9E170E02822B3D3000C97CC /* Networking.swift in Sources */,
+				C9FB8CB0283E5BBE0097F639 /* LabelValuesViewModel.swift in Sources */,
 				C9793698282D3DF3009ADC47 /* LoginView.swift in Sources */,
 				C98AF84C282062E1000201D3 /* RegisterModel.swift in Sources */,
 				C90C1D472819B3CB009FD1F9 /* OnboardingView.swift in Sources */,
 				C93FEAC4281AFCAA0080B3BD /* RegisterTableViewCell.swift in Sources */,
+				C9FB8CB2283E5F630097F639 /* OptionsTableViewCell.swift in Sources */,
 				C9FA8ECD2822283F00E93F04 /* RegisterTextFieldData.swift in Sources */,
 				C9FA8ECF28222B5700E93F04 /* RegisterIncomeDataPickerView.swift in Sources */,
 				C9AFF2152825569600A71F9D /* ConfigurableTableViewProtocol.swift in Sources */,

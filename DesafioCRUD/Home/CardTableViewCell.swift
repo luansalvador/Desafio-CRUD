@@ -74,7 +74,7 @@ class CardTableViewCell: UITableViewCell {
         return view
     }()
     
-    private lazy var balance: UILabel = {
+    private lazy var balanceLabel: UILabel = {
         let view = UILabel()
         view.text = "Saldo"
         view.textColor = .white
@@ -83,7 +83,7 @@ class CardTableViewCell: UITableViewCell {
         return view
     }()
     
-    private lazy var balanceValue: UILabel = {
+    private lazy var balanceValueLabel: UILabel = {
         let view = UILabel()
         view.text = "R$ 999.00"
         view.textColor = .white
@@ -92,14 +92,31 @@ class CardTableViewCell: UITableViewCell {
         return view
     }()
     
-    private lazy var fadeEye: UIButton = {
+    private lazy var fadeEyeButton: UIButton = {
         let view = UIButton(frame: .zero)
         view.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
         view.tintColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-
+    
+    private lazy var agLabel: UILabel = {
+        let view = UILabel()
+        view.text = "Agência: 1-9"
+        view.textColor = .white
+        view.font = UIFont.systemFont(ofSize: 14)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var accountLabel: UILabel = {
+        let view = UILabel()
+        view.text = "Conta: 1"
+        view.textColor = .white
+        view.font = UIFont.systemFont(ofSize: 14)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -118,9 +135,11 @@ class CardTableViewCell: UITableViewCell {
         self.addSubview(paymentButton)
         self.addSubview(transferButton)
         self.addSubview(cardView)
-        self.addSubview(balance)
-        self.addSubview(balanceValue)
-        self.addSubview(fadeEye)
+        self.addSubview(balanceLabel)
+        self.addSubview(balanceValueLabel)
+        self.addSubview(fadeEyeButton)
+        self.addSubview(agLabel)
+        self.addSubview(accountLabel)
     }
     
     private func setupConstraints() {
@@ -134,7 +153,7 @@ class CardTableViewCell: UITableViewCell {
             self.photoButton.heightAnchor.constraint(equalToConstant: 37),
             self.photoButton.widthAnchor.constraint(equalToConstant: 40),
             
-            self.pixButton.topAnchor.constraint(equalTo: self.label.bottomAnchor, constant: 20),
+            self.pixButton.topAnchor.constraint(equalTo: self.cardView.bottomAnchor, constant: 16),
             self.pixButton.trailingAnchor.constraint(equalTo: self.paymentButton.leadingAnchor, constant: -8),
             self.pixButton.heightAnchor.constraint(equalToConstant: 47),
             self.pixButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.28),
@@ -151,20 +170,27 @@ class CardTableViewCell: UITableViewCell {
             
             self.cardView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             self.cardView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            self.cardView.topAnchor.constraint(equalTo: self.transferButton.bottomAnchor, constant: 20),
+            self.cardView.topAnchor.constraint(equalTo: self.label.bottomAnchor, constant: 16),
             self.cardView.heightAnchor.constraint(equalToConstant: 173),
             
-            self.balance.leadingAnchor.constraint(equalTo: self.cardView.leadingAnchor, constant: 16),
-            self.balance.topAnchor.constraint(equalTo: self.cardView.topAnchor, constant: 16),
-            self.balance.widthAnchor.constraint(equalToConstant: 70),
+            self.balanceLabel.leadingAnchor.constraint(equalTo: self.cardView.leadingAnchor, constant: 16),
+            self.balanceLabel.topAnchor.constraint(equalTo: self.cardView.topAnchor, constant: 16),
+            self.balanceLabel.widthAnchor.constraint(equalToConstant: 70),
             
-            self.balanceValue.leadingAnchor.constraint(equalTo: self.balance.leadingAnchor),
-            self.balanceValue.centerYAnchor.constraint(equalTo: self.cardView.centerYAnchor),
-            self.balanceValue.widthAnchor.constraint(equalToConstant: 150),
+            self.balanceValueLabel.leadingAnchor.constraint(equalTo: self.balanceLabel.leadingAnchor),
+            self.balanceValueLabel.centerYAnchor.constraint(equalTo: self.cardView.centerYAnchor),
+            self.balanceValueLabel.widthAnchor.constraint(equalToConstant: 150),
             
-            self.fadeEye.trailingAnchor.constraint(equalTo: self.cardView.trailingAnchor, constant: -16),
-            self.fadeEye.centerYAnchor.constraint(equalTo: self.balance.centerYAnchor)
-
+            self.fadeEyeButton.trailingAnchor.constraint(equalTo: self.cardView.trailingAnchor, constant: -16),
+            self.fadeEyeButton.centerYAnchor.constraint(equalTo: self.balanceLabel.centerYAnchor),
+            
+            self.agLabel.bottomAnchor.constraint(equalTo: self.cardView.bottomAnchor, constant: -16),
+            self.agLabel.leadingAnchor.constraint(equalTo: self.cardView.leadingAnchor, constant: 16),
+            self.agLabel.widthAnchor.constraint(equalToConstant: 100),
+            
+            self.accountLabel.centerXAnchor.constraint(equalTo: self.cardView.centerXAnchor, constant: 16),
+            self.accountLabel.centerYAnchor.constraint(equalTo: self.agLabel.centerYAnchor),
+            self.accountLabel.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
     

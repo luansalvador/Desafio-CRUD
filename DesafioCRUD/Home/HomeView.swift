@@ -11,8 +11,8 @@ class HomeView: UIView {
     
     private lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero, style: .plain)
-        //view.register(CardTableViewCell.self, forCellReuseIdentifier: CardTableViewCell.identifier)
         view.register(CardTableViewCell.self, forCellReuseIdentifier: CardTableViewCell.identifier)
+        view.register(OptionsTabeViewCell.self, forCellReuseIdentifier: OptionsTabeViewCell.identifier)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -38,8 +38,7 @@ class HomeView: UIView {
             self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ])
-        
+        ])        
     }
     
     private func setupAditionalConfig() {

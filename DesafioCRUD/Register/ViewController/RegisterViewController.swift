@@ -66,7 +66,7 @@ extension RegisterViewController: UITableViewDelegate, UITableViewDataSource, UI
     switch indexPath.row {
         
         case 5:
-        let cell = tableView.dequeueReusableCell(withIdentifier: RegisterDatePickerCell.identifier, for: indexPath) as? RegisterDatePickerCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: RegisterDatePickerCell.identifier, for: indexPath) as? RegisterDatePickerCell
             let text = RegisterLabelValues.allCases[indexPath.row].rawValue
             cell?.configureCell(text: text, tag: indexPath.row, parent: self)
             cell?.selectionStyle = .none
